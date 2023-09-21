@@ -10,7 +10,7 @@ const TodoContextProvider = ({children}) => {
     const [theme,setTheme] = useState("light");
     const [loading,setLoading] = useState(true);
     const fetTodos = async ()=>{
-        fetch("http://localhost:3000/api/todo",{
+        fetch("/api/todo",{
           next: { revalidate: 5 }, 
         })
         .then(res=>res.json())

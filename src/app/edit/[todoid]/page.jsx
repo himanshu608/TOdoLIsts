@@ -6,7 +6,7 @@ import React, { useContext, useEffect, useState } from 'react'
 const Edit = ({params}) => {
     const [todo,setTodo] = useState(null);
     useEffect(()=>{
-        fetch(`http://localhost:3000/api/todo?todoid=${params.todoid}`)
+        fetch(`/api/todo?todoid=${params.todoid}`)
         .then((res)=> res.json())
         .then((data) => setTodo(data));
     },[])

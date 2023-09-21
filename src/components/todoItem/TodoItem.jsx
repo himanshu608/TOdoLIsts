@@ -9,7 +9,7 @@ const TodoItem = ({todoId,todoTitle,todoDesc}) => {
     const {setUpdate} = useContext(TodoContext);
 
     const deleteTodo = async ()=>{
-        const data = await fetch("http://localhost:3000/api/todo",{
+        const data = await fetch("/api/todo",{
           method: "DELETE",
           body: JSON.stringify({
             _id:todoId,

@@ -1,6 +1,6 @@
 "use client"
 const addNewTodo = async (todoId,title,description)=>{
-    const responce = await fetch("http://localhost:3000/api/todo",{
+    const responce = await fetch("/api/todo",{
         method: "POST",
         body: JSON.stringify({
         title:title,
@@ -12,7 +12,7 @@ const addNewTodo = async (todoId,title,description)=>{
 }
 
 const updateTodo = async (todoId,title,description)=>{
-    const responce = await fetch("http://localhost:3000/api/todo",{
+    const responce = await fetch("/api/todo",{
         method: "PUT",
         body: JSON.stringify({
         _id:todoId,
