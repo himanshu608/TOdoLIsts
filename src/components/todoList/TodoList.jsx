@@ -8,17 +8,19 @@ const TodoList = () => {
     const {todos,loading} = useContext(TodoContext);
   return (
     <div>
-        {loading && (
+        {loading ? (
           <>
             <LoadingSkeleton/>
             <LoadingSkeleton/>
             <LoadingSkeleton/>
             <LoadingSkeleton/>
           </>
-        )}
-        {todos?.map((todo) =>{
+        ):(
+          todos?.map((todo) =>{
             return <TodoItem key={todo._id} todoId={todo._id} todoTitle={todo.title} todoDesc={todo.description} />
-        })}
+          })
+        )}
+        
     </div>
   )
 }
