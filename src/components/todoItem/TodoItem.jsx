@@ -19,6 +19,7 @@ const TodoItem = ({todoId,todoTitle,todoDesc}) => {
         // setTodos(data)
         setUpdate(todos)
       }
+      
   return (
     <div className={styles.container}>
         <div className={styles.content}>

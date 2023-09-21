@@ -3,6 +3,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import TodoContextProvider from '@/provider/TodoContextProvider'
 import ThemeWrapper from '@/wrapper/ThemeWrapper'
+import UserSessionProvider from '@/provider/UserSessionProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +16,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <TodoContextProvider>
+      <UserSessionProvider>
+            <TodoContextProvider>
 
       <ThemeWrapper>
       <div className="container">
@@ -24,6 +26,7 @@ export default function RootLayout({ children }) {
         </div>
       </ThemeWrapper>
       </TodoContextProvider>
+      </UserSessionProvider>
       </body>
     </html>
   )

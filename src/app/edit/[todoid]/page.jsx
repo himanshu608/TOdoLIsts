@@ -1,7 +1,6 @@
 "use client"
 import TodoForm from '@/components/todoForm/TodoForm'
-import { TodoContext } from '@/provider/TodoContextProvider';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Edit = ({params}) => {
     const [todo,setTodo] = useState(null);

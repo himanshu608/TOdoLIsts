@@ -1,6 +1,7 @@
 import mongoose, {Schema} from "mongoose";
 
 const toDoSchema = new Schema({
+    userId: String,
     title: String,
     description: String
 })
